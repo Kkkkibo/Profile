@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiran Bora | Digital Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0d1117;
+            color: #e2e8f0;
+            background-image: radial-gradient(at 0% 0%, #1a202c 0, transparent 50%), radial-gradient(at 100% 100%, #2d3748 0, transparent 50%);
+            background-attachment: fixed;
+        }
+        .card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #4ade80, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .ai-card {
+            background: linear-gradient(135deg, rgba(31, 41, 55, 0.8), rgba(55, 65, 81, 0.8));
+            border: 1px solid #3b82f6;
+        }
+        .shine {
+            position: relative;
+        }
+        .shine::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-20deg);
+            animation: shine 1.5s infinite;
+            pointer-events: none;
+        }
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        @keyframes pulse-border {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 #8b5cf6; }
+            50% { transform: scale(1.02); box-shadow: 0 0 0 8px rgba(139, 92, 246, 0); }
+        }
+        .pulsing-border {
+            animation: pulse-border 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 sm:p-8 lg:p-12">
+        <!-- Header Section -->
+        <header class="flex flex-col sm:flex-row items-center justify-between card rounded-3xl shadow-2xl p-6 sm:p-10 mb-8 lg:mb-12">
+            <div class="flex-shrink-0 mb-6 sm:mb-0">
+                <svg viewBox="0 0 200 200" class="w-40 h-40 rounded-full border-4 border-purple-500 shadow-xl pulsing-border" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <clipPath id="profile-clip">
+                            <circle cx="100" cy="100" r="95" />
+                        </clipPath>
+                    </defs>
+                    <rect x="0" y="0" width="200" height="200" fill="#2d3748" clip-path="url(#profile-clip)" />
+                    <circle cx="100" cy="100" r="95" fill="none" stroke="#60a5fa" stroke-width="2" />
+                    
+                    <!-- Happy Face SVG -->
+                    <path d="M50 120 Q 100 160, 150 120" stroke="#4ade80" stroke-width="6" fill="none" stroke-linecap="round"/>
+                    <circle cx="75" cy="85" r="10" fill="#4ade80" />
+                    <circle cx="125" cy="85" r="10" fill="#4ade80" />
+                </svg>
+            </div>
+            <div class="text-center sm:text-left sm:ml-8 flex-grow">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-2">
+                    <span class="text-gradient">Kiran Bora</span>
+                </h1>
+                <p class="text-lg sm:text-2xl text-gray-300 font-medium">Chartered Accountant | Digital Transformation & Automation</p>
+                <div class="mt-4 text-gray-400 flex flex-col sm:flex-row sm:space-x-6 items-center sm:items-start justify-center sm:justify-start">
+                    <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-purple-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>Mumbai, India</p>
+                    <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-purple-400" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>cakiranbora@gmail.com</p>
+                    <a href="https://linkedin.com/in/CAKiBo" class="flex items-center text-gray-400 hover:text-purple-400 transition-colors duration-200" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>linkedin.com/in/CAKiBo</a>
+                </div>
+            </div>
+        </header>
+        
+        <!-- About Section -->
+        <section class="card rounded-3xl shadow-2xl p-6 sm:p-10 mb-8 lg:mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-200 mb-6 border-b border-purple-400 pb-2">About Me</h2>
+            <p class="text-lg text-gray-400 leading-relaxed">I am a motivated Chartered Accountant with a strong focus on <span class="font-bold text-purple-400">Digital Transformation and Automation</span>, currently driving innovation as an Assistant Manager at Contetra Pvt Ltd. My passion lies in leveraging technology to turn complex financial data into actionable strategic insights. In my current role, I have had the unique opportunity to functionally lead the development of an AI-based product and spearhead the creation of automation tools that have significantly boosted efficiency. Beyond my core work, I am deeply committed to <span class="font-bold text-purple-400">teaching</span> and have trained over 600 individuals in modern tools like Advanced Excel, Power BI, and Tally, empowering them to excel in their own careers. I am continuously exploring how my expertise in finance can be applied to technology-centric roles, always seeking new and efficient methods to solve business challenges.</p>
+        </section>
+
+        <!-- Automation & AI Expertise Section -->
+        <section class="card rounded-3xl shadow-2xl p-6 sm:p-10 mb-8 lg:mb-12 ai-card">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-200 mb-6 border-b border-blue-400 pb-2">Automation & AI Expertise</h2>
+            <p class="text-lg text-gray-400 mb-6">I leverage cutting-edge tools to streamline workflows and drive efficiency, with a proven track record in automating financial processes.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="font-bold text-blue-400 mb-2 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.846 6.844L12 17.269l-4.846-8.181a1.25 1.25 0 011.082-1.896h7.528a1.25 1.25 0 011.082 1.896z" clip-rule="evenodd" /></svg>Process Automation</h3>
+                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 mt-4">
+                        <li>One-click automation for financial statements.</li>
+                        <li>Automated financial rating tools (70% efficiency boost).</li>
+                        <li>Streamlined audit & reporting processes (50% efficiency boost).</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="font-bold text-blue-400 mb-2 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2"><path d="M11.25 11.25a.75.75 0 011.5 0v.75h.75a.75.75 0 010 1.5h-.75v.75a.75.75 0 01-1.5 0v-.75h-.75a.75.75 0 010-1.5h.75v-.75z" /><path d="M19.5 7.5a3 3 0 00-3-3h-9a3 3 0 00-3 3v9a3 3 0 003 3h9a3 3 0 003-3v-9z" /></svg>AI & ML</h3>
+                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 mt-4">
+                        <li>Functionally led development of an AI-based product for budgeting.</li>
+                        <li>Hands-on experience with prompting in ChatGPT, Gemini, Copilot.</li>
+                        <li>Knowledge of Notebook LM, Napkin.ai, Gamma AI.</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="font-bold text-blue-400 mb-2 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2"><path fill-rule="evenodd" d="M4.5 5.653c0-1.088.924-1.936 2.003-1.884l12.497.382a1.94 1.94 0 011.94 1.94V19.5a1.94 1.94 0 01-1.94 1.94H6.503c-1.079 0-1.94-.85-1.94-1.94v-13.847zM9 12a1 1 0 100 2h6a1 1 0 100-2H9z" clip-rule="evenodd" /></svg>Data Visualization</h3>
+                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 mt-4">
+                        <li>Developed dynamic Power BI dashboards.</li>
+                        <li>Improved data analysis workflows.</li>
+                        <li>Proficiency in Advanced Excel, Power Query, VBA, Macros.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Teaching Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 lg:mb-12">
+            <!-- Work Experience -->
+            <div class="card rounded-3xl shadow-2xl p-6 sm:p-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-200 mb-6 border-b border-purple-400 pb-2">Work Experience</h2>
+                <div class="space-y-6">
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-md border border-gray-700">
+                        <h3 class="text-xl font-semibold text-purple-400">Contetra Pvt Ltd</h3>
+                        <p class="text-sm text-gray-500">Assistant Manager (Digital Transformation & Automation)</p>
+                        <p class="font-medium text-gray-400 mt-2">March 2023 - Present</p>
+                        <ul class="list-disc list-inside text-gray-400 text-sm mt-4 space-y-1">
+                            <li>Headed the creation of a one-click automation tool that generates comprehensive financial statements (P&L, Balance Sheet, Cash Flow) for 26 branches, accelerating the financial consolidation process by 85%.</li>
+                            <li>Functionally led the development of an AI-based product for advanced budgeting, forecasting, and data-driven insights.</li>
+                            <li>Designed and delivered training sessions on basic and advanced Excel to over 500 employees, enhancing company-wide data management skills.</li>
+                            <li>Led diagnostic reviews for manufacturing and EPC clients to identify and resolve critical process gaps.</li>
+                            <li>Spearheaded the User Acceptance Testing (UAT) for the Finance & Taxation module of a new ERP implementation.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-md border border-gray-700">
+                        <h3 class="text-xl font-semibold text-purple-400">IDFC FIRST BANK</h3>
+                        <p class="text-sm text-gray-500">Credit Analyst & Associate Relationship Manager</p>
+                        <p class="font-medium text-gray-400 mt-2">March 2023 - January 2025</p>
+                        <ul class="list-disc list-inside text-gray-400 text-sm mt-4 space-y-1">
+                            <li>Conducted in-depth financial analysis for 20+ corporate clients, including financial modeling and variance analysis.</li>
+                            <li>Enhanced operational efficiency with automated financial rating tools, improving turnaround time by over 70%.</li>
+                            <li>Managed a portfolio of corporate clients, providing precise credit assessment and insightful financial reports.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-md border border-gray-700">
+                        <h3 class="text-xl font-semibold text-purple-400">RB SHARMA & Co</h3>
+                        <p class="text-sm text-gray-500">Article Assistant</p>
+                        <p class="font-medium text-gray-400 mt-2">August 2020 - July 2023</p>
+                        <ul class="list-disc list-inside text-gray-400 text-sm mt-4 space-y-1">
+                            <li>Gained hands-on experience in Tally ERP, Advanced Excel, VBA, Macros, and Power Query for maintaining financial records, executing monthly GST filings, and ensuring compliance.</li>
+                            <li>Conducted internal audits, focusing on budgeting, forecasting, and regulatory compliance for clients in various industries.</li>
+                            <li>Implemented automation tools using Excel, Power BI, VBA, Macros, and AI, streamlining audit and reporting processes and improving efficiency by 50%.</li>
+                            <li>Handled income tax computations, filing returns, and managing TDS for diverse clients.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Teaching Journey -->
+            <div class="card rounded-3xl shadow-2xl p-6 sm:p-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-200 mb-6 border-b border-purple-400 pb-2">My Teaching Journey</h2>
+                <div class="flex flex-col items-center text-center">
+                    <p class="text-lg text-gray-400 mb-6">Beyond my professional work, I am passionate about sharing knowledge and empowering others through teaching.</p>
+                    <div class="p-6 bg-purple-900/40 rounded-xl shadow-inner text-center border-2 border-purple-600 shine">
+                        <p class="text-6xl font-extrabold text-purple-200 mb-2">600+</p>
+                        <p class="text-xl font-medium text-purple-300">Individuals Trained</p>
+                        <p class="mt-4 text-sm text-gray-500">in Advanced Excel, Power BI & Tally.</p>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-6">This journey includes training over <span class="font-bold">100</span> individuals during my article-ship and over <span class="font-bold">500</span> employees at <span class="font-bold">Contetra Pvt Ltd</span>.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Additional Section to fill space -->
+        <section class="card rounded-3xl shadow-2xl p-6 sm:p-10 mb-8 lg:mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-200 mb-6 border-b border-purple-400 pb-2">My Achievements & Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="font-bold text-purple-400 mb-2">Key Skills</h3>
+                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
+                        <li>Financial Analysis & Modeling</li>
+                        <li>Advanced Excel, Power BI, Tally ERP</li>
+                        <li>Process Automation & AI</li>
+                        <li>Auditing & Statutory Compliance</li>
+                        <li>ERP Implementation & UAT</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="font-bold text-purple-400 mb-2">Professional Strengths</h3>
+                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
+                        <li>Analytical Problem Solver</li>
+                        <li>Collaborative Team Leader</li>
+                        <li>Thrives Under Pressure</li>
+                        <li>Continuous Learner</li>
+                        <li>Growth-Oriented Mindset</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies & Interests Section -->
+        <section class="card rounded-3xl shadow-2xl p-6 sm:p-10 mb-8 lg:mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-200 mb-6 border-b border-purple-400 pb-2">Beyond Work</h2>
+            <p class="text-lg text-gray-400 mb-6">Outside of my professional life, I maintain a balanced life where creativity and curiosity meet.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-4 rounded-xl text-center bg-gray-800 shadow-lg border border-gray-700">
+                    <p class="text-3xl mb-2">🎨</p>
+                    <h3 class="font-semibold text-purple-400">Creative Pursuits</h3>
+                    <p class="text-sm text-gray-400">Writing one-liners and posting my artwork on a dedicated page.</p>
+                </div>
+                <div class="p-4 rounded-xl text-center bg-gray-800 shadow-lg border border-gray-700">
+                    <p class="text-3xl mb-2">✈️</p>
+                    <h3 class="font-semibold text-purple-400">Traveling</h3>
+                    <p class="text-sm text-gray-400">Exploring new places and discovering new cultures.</p>
+                </div>
+                <div class="p-4 rounded-xl text-center bg-gray-800 shadow-lg border border-gray-700">
+                    <p class="text-3xl mb-2">⚽</p>
+                    <h3 class="font-semibold text-purple-400">Sports</h3>
+                    <p class="text-sm text-gray-400">Playing football on weekends with friends.</p>
+                </div>
+                <div class="p-4 rounded-xl text-center bg-gray-800 shadow-lg border border-gray-700">
+                    <p class="text-3xl mb-2">🍿</p>
+                    <h3 class="font-semibold text-purple-400">Entertainment</h3>
+                    <p class="text-sm text-gray-400">Binge-watching my favorite series and movies to stay inspired.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="text-center text-gray-600 text-sm mt-8">
+            <p>&copy; 2025 Kiran Bora. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
